@@ -2,6 +2,8 @@ require_relative '../../db/config'
 
 
 class Legislator < ActiveRecord::Base
+	has_many :tweets
+	
 	def name
 		"#{firstname} #{middlename} #{lastname}"
 		# Legislator.select(:firstname, :middlename, :lastname).order(lastname: :desc)
